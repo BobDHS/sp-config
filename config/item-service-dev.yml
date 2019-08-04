@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: item-service
+    
+  rabbitmq:
+    host: 192.168.224.128
+    port: 5672
+    username: admin
+    password: admin
+    
+      
+#server:
+#  port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka
+    registry-fetch-interval-seconds: 30
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    
+---
+spring:
+  profiles: item1
+  
+server:
+  port: 8001
+  
+---
+spring:
+  profiles: item2
+
+server:
+  port: 8002
+    
