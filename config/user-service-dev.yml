@@ -20,22 +20,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka
-    registry-fetch-interval-seconds: 30
-  instance:
-    lease-renewal-interval-in-seconds: 30
+      defaultZone: http://eureka1:2001/eureka, http://eureka1:2002/eureka
 
-server:
-  port: 8101
-
-  
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka1:2001/eureka
-    registry-fetch-interval-seconds: 30
-  instance:
-    lease-renewal-interval-in-seconds: 30
    
 management:
   endpoints:
